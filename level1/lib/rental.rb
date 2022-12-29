@@ -1,16 +1,11 @@
 class Rental
-  attr_reader :id, :car_id, :start_date, :end_date, :distance, :duration
+  attr_reader :id, :car_id, :start_date, :end_date
 
-  def initialize(id:, car_id:, start_date:, end_date:, distance:)
+  def initialize(id:, car_id:, start_date:, end_date:)
     @id = id
     @car_id = car_id
     @start_date = start_date
     @end_date = end_date
-    @distance = distance
-    @duration = duration
   end
 
-  def duration
-    (end_date - start_date).to_i + 1
-  end
 end
